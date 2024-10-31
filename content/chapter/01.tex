@@ -1,33 +1,71 @@
 %!TEX root = ../../main.tex
 
-\chapter{Methodik}
-\label{chap:methodik}
+\chapter{Vorstellung der MVC-Architektur}
+\label{chap:vorstellung}
 
-\section{Kriterien zur Bewertung der MVC-Architektur}
+Das Model-View-Controller (MVC) Pattern ist ein bewährtes Software-Architekturmuster, dass die Strukturierung von Anwendungen in drei Hauptkomponenten vorsieht: Model, View und Controller. Diese Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten. MVC wurde ursprünglich für die Benutzeroberflächenentwicklung in Smalltalk entwickelt und hat sich seitdem als Standard für die Strukturierung von Webanwendungen etabliert.
 
-Olsson et al. \cite{olsson2015evolution} legen Kriterien fest, um 
-MVC in Videospielen zu untersuchen.
-Die Bewertung der Vor- und Nachteile der MVC-Architektur erfolgt orientiert 
-sich anhand der Kriterien, die zur Analyse der Architekturstruktur und ihrer 
-Effektivität herangezogen werden in \cite{olsson2015evolution}. Im Fokus stehen 
-die folgenden Aspekte:
+Das MVC-Pattern ist besonders nützlich in komplexen Anwendungen, bei denen eine klare Trennung zwischen Daten, Benutzeroberfläche und Steuerungslogik erforderlich ist. Es ermöglicht Entwicklern, sich auf spezifische Aspekte der Anwendung zu konzentrieren, ohne sich um die anderen Teile kümmern zu müssen. Dies führt zu einer besseren Organisation des Codes und erleichtert die Zusammenarbeit in Teams.
 
+
+\section{Eigenschaften}
+
+Das MVC-Pattern teilt eine Anwendung in drei Hauptkomponenten:
 \begin{itemize}
-    \item \textbf{Modularität}: Untersucht wird, wie klar die Trennung 
-    von Modell, View und Controller ist. Ein hohes Maß an Trennung 
-    deutet auf eine verbesserte Wartbarkeit hin.
-    
-    \item \textbf{Kohäsion und Kopplung}: Die Kohäsion misst, wie 
-    eng zusammenhängend die Verantwortlichkeiten der einzelnen 
-    Komponenten sind. Niedrige Kopplung zwischen Klassen ist ein 
-    positives Zeichen für Wiederverwendbarkeit.
-    
-    \item \textbf{Code Overhead}: Hierbei wird analysiert, inwiefern 
-    die MVC-Implementierung zusätzlichen Codeaufwand erzeugt und 
-    wie sich dies auf die Effizienz der Anwendung auswirkt.
-\end{itemize}
 
-Jede dieser Metriken dient dazu, die strukturellen Vorzüge sowie 
-potenzielle Nachteile der MVC-Architektur zu ermitteln und eine 
-objektive Analyse zu gewährleisten. Basierend auf diesen Kriterien 
-werden die Ergebnisse in den folgenden Abschnitten diskutiert.
+\item Model: Diese Komponente repräsentiert die Daten und die Geschäftslogik der Anwendung. Sie ist verantwortlich für das Abrufen, Speichern und Verarbeiten von Daten. Das Model benachrichtigt die View über Änderungen, sodass die Benutzeroberfläche aktualisiert werden kann. Das Model enthält die Kernfunktionalität der Anwendung und ist unabhängig von der Benutzeroberfläche.
+
+\item View: Die View-Komponente stellt die Benutzeroberfläche dar. Sie zeigt die Daten des Models an und sendet Benutzereingaben an den Controller weiter. Die View ist für die Darstellung der Daten zuständig und reagiert auf Änderungen im Model. Sie ist passiv und kennt die Geschäftslogik nicht; sie zeigt nur die Daten an, die ihr vom Model bereitgestellt werden.
+
+\item Controller: Der Controller verarbeitet die Benutzereingaben, interagiert mit dem Model und aktualisiert die View entsprechend. Er fungiert als Vermittler zwischen Model und View und steuert den Datenfluss zwischen diesen Komponenten. Der Controller interpretiert die Eingaben des Benutzers und ruft die entsprechenden Methoden im Model auf, um die Daten zu ändern. Anschließend aktualisiert er die View, um die neuen Daten anzuzeigen.
+
+\end{itemize}
+Diese Struktur ermöglicht eine klare Trennung der Verantwortlichkeiten, was die Wartbarkeit und Erweiterbarkeit der Anwendung erleichtert. Entwickler können Änderungen an einer Komponente vornehmen, ohne die anderen Komponenten zu beeinflussen. Dies ist besonders nützlich in großen Projekten, bei denen mehrere Entwickler gleichzeitig an verschiedenen Teilen der Anwendung arbeiten.
+
+\section{Grafische Darstellung}
+
+Ein Klassendiagramm für das MVC-Pattern könnte wie folgt aussehen:
+
++-------------+       +-------------+       +-------------+
+|   Controller|       |     Model   |       |     View    |
++-------------+       +-------------+       +-------------+
+| - model     |       | - data      |       | - render()  |
+| - view      |       | - methods() |       | - update()  |
+| + handle()  |       | + getData() |       |             |
+| + update()  |       | + setData() |       |             |
++-------------+       +-------------+       +-------------+
+
+In diesem Diagramm:
+•	Der Controller enthält Referenzen auf das Model und die View und hat Methoden zum Verarbeiten von Eingaben und Aktualisieren der View. Er ist das Bindeglied zwischen Model und View und sorgt dafür, dass die Benutzerinteraktionen korrekt verarbeitet werden.
+•	Das Model enthält die Daten und Methoden zur Datenmanipulation. Es stellt die Geschäftslogik der Anwendung dar und ist unabhängig von der Benutzeroberfläche.
+•	Die View enthält Methoden zur Darstellung der Daten und zur Aktualisierung der Benutzeroberfläche. Sie zeigt die Daten an, die vom Model bereitgestellt werden, und reagiert auf Änderungen im Model.
+Ein detaillierteres Klassendiagramm könnte auch die Interaktionen zwischen den Komponenten darstellen:
+
++-------------+       +-------------+       +-------------+
+|   Controller|       |     Model   |       |     View    |
++-------------+       +-------------+       +-------------+
+| - model     |       | - data      |       | - render()  |
+| - view      |       | - methods() |       | - update()  |
+| + handle()  |       | + getData() |       |             |
+| + update()  |       | + setData() |       |             |
++-------------+       +-------------+       +-------------+
+       |                     |                     |
+       | 1. User Input       |                     |
+       +-------------------->|                     |
+       |                     |                     |
+       | 2. Update Model     |                     |
+       +-------------------->|                     |
+       |                     |                     |
+       | 3. Notify View      |                     |
+       +-------------------->|                     |
+       |                     |                     |
+       | 4. Render View      |                     |
+       +-------------------->|                     |
+
+In diesem erweiterten Diagramm:
+1.	Der Benutzer interagiert mit der View (z.B. durch Klicken auf einen Button).
+2.	Die View sendet die Benutzereingabe an den Controller.
+3.	Der Controller verarbeitet die Eingabe und aktualisiert das Model.
+4.	Das Model benachrichtigt die View über die Änderungen.
+5.	Die View rendert die aktualisierten Daten.
+Diese Abfolge zeigt, wie die Komponenten zusammenarbeiten, um Benutzereingaben zu verarbeiten und die Benutzeroberfläche zu aktualisieren. Die klare Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten.
