@@ -24,7 +24,7 @@ Diese Struktur ermöglicht eine klare Trennung der Verantwortlichkeiten, was die
 
 \section{Grafische Darstellung}
 
-Ein Klassendiagramm für das MVC-Pattern könnte wie folgt aussehen:
+Ein Klassendiagramm für das MVC-Pattern könnte wie folgt aussehen. Es zeigt die Beziehungen und Interaktionen zwischen Model, View und Controller.
 
 \begin{figure}[h]
 \centering
@@ -32,37 +32,28 @@ Ein Klassendiagramm für das MVC-Pattern könnte wie folgt aussehen:
 \caption{Das Logo der Musterfirma\footnotemark}
 \end{figure}
 
-In diesem Diagramm:
-•	Der Controller enthält Referenzen auf das Model und die View und hat Methoden zum Verarbeiten von Eingaben und Aktualisieren der View. Er ist das Bindeglied zwischen Model und View und sorgt dafür, dass die Benutzerinteraktionen korrekt verarbeitet werden.
-•	Das Model enthält die Daten und Methoden zur Datenmanipulation. Es stellt die Geschäftslogik der Anwendung dar und ist unabhängig von der Benutzeroberfläche.
-•	Die View enthält Methoden zur Darstellung der Daten und zur Aktualisierung der Benutzeroberfläche. Sie zeigt die Daten an, die vom Model bereitgestellt werden, und reagiert auf Änderungen im Model.
-Ein detaillierteres Klassendiagramm könnte auch die Interaktionen zwischen den Komponenten darstellen:
+In diesem Klassendiagramm sehen wir die folgenden drei Komponenten:
 
-+-------------+       +-------------+       +-------------+
-|   Controller|       |     Model   |       |     View    |
-+-------------+       +-------------+       +-------------+
-| - model     |       | - data      |       | - render()  |
-| - view      |       | - methods() |       | - update()  |
-| + handle()  |       | + getData() |       |             |
-| + update()  |       | + setData() |       |             |
-+-------------+       +-------------+       +-------------+
-       |                     |                     |
-       | 1. User Input       |                     |
-       +-------------------->|                     |
-       |                     |                     |
-       | 2. Update Model     |                     |
-       +-------------------->|                     |
-       |                     |                     |
-       | 3. Notify View      |                     |
-       +-------------------->|                     |
-       |                     |                     |
-       | 4. Render View      |                     |
-       +-------------------->|                     |
+\begin{itemize}
+\item Der Controller enthält Referenzen auf das Model und die View und hat Methoden zum Verarbeiten von Eingaben und Aktualisieren der View. Er ist das Bindeglied zwischen Model und View und sorgt dafür, dass die Benutzerinteraktionen korrekt verarbeitet werden.
 
-In diesem erweiterten Diagramm:
-1.	Der Benutzer interagiert mit der View (z.B. durch Klicken auf einen Button).
-2.	Die View sendet die Benutzereingabe an den Controller.
-3.	Der Controller verarbeitet die Eingabe und aktualisiert das Model.
-4.	Das Model benachrichtigt die View über die Änderungen.
-5.	Die View rendert die aktualisierten Daten.
+\item Das Model enthält die Daten und Methoden zur Datenmanipulation. Es stellt die Geschäftslogik der Anwendung dar und ist unabhängig von der Benutzeroberfläche.
+
+\item Die View enthält Methoden zur Darstellung der Daten und zur Aktualisierung der Benutzeroberfläche. Sie zeigt die Daten an, die vom Model bereitgestellt werden, und reagiert auf Änderungen im Model.
+\end{itemize}
+
+Die Interaktionen zwischen den Komponenten sind wie folgt:
+
+\begin{enumerate}
+\item Der Benutzer interagiert mit der View (z.B. durch Klicken auf einen Button).
+
+\item Die View sendet die Benutzereingabe an den Controller.
+
+\item Der Controller verarbeitet die Eingabe und aktualisiert das Model.
+
+\item Das Model benachrichtigt die View über die Änderungen.
+
+\item Die View rendert die aktualisierten Daten.
+\end{enumerate}
+
 Diese Abfolge zeigt, wie die Komponenten zusammenarbeiten, um Benutzereingaben zu verarbeiten und die Benutzeroberfläche zu aktualisieren. Die klare Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten.
