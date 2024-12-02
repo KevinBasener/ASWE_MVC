@@ -42,7 +42,7 @@ In diesem Klassendiagramm sehen wir die folgenden drei Komponenten:
 \item Die View enthält Methoden zur Darstellung der Daten und zur Aktualisierung der Benutzeroberfläche. Sie zeigt die Daten an, die vom Model bereitgestellt werden, und reagiert auf Änderungen im Model.
 \end{itemize}
 
-Die Interaktionen zwischen den Komponenten sind wie folgt:
+Um die Interaktionen zwischen den Komponenten zu verstehen, werden diese im folgenden anhand eines Beispiels erklärt. In diesem Beispiel Intaagiert ein Nutzer mit der Benutzeroberfläche. Darauf hin werden folgende Interaktionen durchgeführt.
 
 \begin{enumerate}
 \item Der Benutzer interagiert mit der View (z.B. durch Klicken auf einen Button).
@@ -59,3 +59,54 @@ Die Interaktionen zwischen den Komponenten sind wie folgt:
 Diese Abfolge zeigt, wie die Komponenten zusammenarbeiten, um Benutzereingaben zu verarbeiten und die Benutzeroberfläche zu aktualisieren. Die klare Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten.
 
 \section{Code Beispiel}
+
+Hier ist ein abstraktes Codebeispiel, das das MVC-Pattern in einer Programmiersprache wie Python veranschaulicht:
+
+\begin{verbatim}
+# Model
+class Model:
+    def __init__(self):
+        self.data = "Initial Data"
+
+    def get_data(self):
+        return self.data
+
+    def set_data(self, data):
+        self.data = data
+
+# View
+class View:
+    def display_data(self, data):
+        print(f"Data: {data}")
+
+# Controller
+class Controller:
+    def __init__(self, model, view):
+        self.model = model
+        self.view = view
+
+    def update_data(self, data):
+        self.model.set_data(data)
+        self.view.display_data(self.model.get_data())
+
+# Anwendung
+if __name__ == "__main__":
+    model = Model()
+    view = View()
+    controller = Controller(model, view)
+
+    # Initiale Anzeige
+    controller.view.display_data(controller.model.get_data())
+
+    # Daten aktualisieren
+    controller.update_data("Neue Daten")
+\end{verbatim}
+
+In diesem Beispiel:
+\begin{itemize}
+    \item Das \texttt{Model} speichert die Daten und stellt Methoden zum Abrufen und Aktualisieren der Daten bereit.
+    \item Die \texttt{View} zeigt die Daten an, die vom Model bereitgestellt werden.
+    \item Der \texttt{Controller} vermittelt zwischen Model und View, verarbeitet Benutzereingaben und aktualisiert das Model entsprechend.
+\end{itemize}
+
+Dieses Beispiel zeigt, wie die Komponenten des MVC-Patterns zusammenarbeiten, um Daten zu verwalten und anzuzeigen. Der Controller verarbeitet die Eingaben, aktualisiert das Model und sorgt dafür, dass die View die aktualisierten Daten anzeigt.
