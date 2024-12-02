@@ -3,14 +3,14 @@
 \chapter{Vorstellung der MVC-Architektur}
 \label{chap:vorstellung}
 
-Das Model-View-Controller (MVC) Pattern ist ein bewährtes Software-Architekturmuster, dass die Strukturierung von Anwendungen in drei Hauptkomponenten vorsieht: Model, View und Controller. Diese Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten. MVC wurde ursprünglich für die Benutzeroberflächenentwicklung in Smalltalk entwickelt und hat sich seitdem als Standard für die Strukturierung von Webanwendungen etabliert.
+Das Model-View-Controller (MVC) Pattern ist ein bewährtes Software-Architekturmuster, dass die Strukturierung von Anwendungen in drei Hauptkomponenten vorsieht: Model, View und Controller. Diese Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten. MVC wurde ursprünglich für die Benutzeroberflächenentwicklung in Smalltalk (Programmiersprache) entwickelt und hat sich seitdem als Standard für die Strukturierung von Webanwendungen etabliert.
 
 Das MVC-Pattern ist besonders nützlich in komplexen Anwendungen, bei denen eine klare Trennung zwischen Daten, Benutzeroberfläche und Steuerungslogik erforderlich ist. Es ermöglicht Entwicklern, sich auf spezifische Aspekte der Anwendung zu konzentrieren, ohne sich um die anderen Teile kümmern zu müssen. Dies führt zu einer besseren Organisation des Codes und erleichtert die Zusammenarbeit in Teams.
 
 
 \section{Eigenschaften}
 
-Das MVC-Pattern teilt eine Anwendung in drei Hauptkomponenten:
+Das MVC-Pattern teilt eine Anwendung in drei Hauptkomponenten, die jeweils spezifische Aufgaben und Verantwortlichkeiten haben. Diese Hauptkomponenten werden im folgenden genauer erklärt:
 \begin{itemize}
 
 \item Model: Diese Komponente repräsentiert die Daten und die Geschäftslogik der Anwendung. Sie ist verantwortlich für das Abrufen, Speichern und Verarbeiten von Daten. Das Model benachrichtigt die View über Änderungen, sodass die Benutzeroberfläche aktualisiert werden kann. Das Model enthält die Kernfunktionalität der Anwendung und ist unabhängig von der Benutzeroberfläche.
