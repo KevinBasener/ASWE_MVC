@@ -26,14 +26,11 @@ Diese Struktur ermöglicht eine klare Trennung der Verantwortlichkeiten, was die
 
 Ein Klassendiagramm für das MVC-Pattern könnte wie folgt aussehen:
 
-+-------------+       +-------------+       +-------------+
-|   Controller|       |     Model   |       |     View    |
-+-------------+       +-------------+       +-------------+
-| - model     |       | - data      |       | - render()  |
-| - view      |       | - methods() |       | - update()  |
-| + handle()  |       | + getData() |       |             |
-| + update()  |       | + setData() |       |             |
-+-------------+       +-------------+       +-------------+
+\begin{figure}[h]
+\centering
+\includegraphics[height=.6\textwidth]{Klassendiagramm.png}
+\caption{Das Logo der Musterfirma\footnotemark}
+\end{figure}
 
 In diesem Diagramm:
 •	Der Controller enthält Referenzen auf das Model und die View und hat Methoden zum Verarbeiten von Eingaben und Aktualisieren der View. Er ist das Bindeglied zwischen Model und View und sorgt dafür, dass die Benutzerinteraktionen korrekt verarbeitet werden.
