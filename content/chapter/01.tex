@@ -3,28 +3,29 @@
 \chapter{Vorstellung der MVC-Architektur}
 \label{chap:vorstellung}
 
-Das Model-View-Controller (MVC) Pattern ist ein bewährtes Software-Architekturmuster, dass die Strukturierung von Anwendungen in drei Hauptkomponenten vorsieht: Model, View und Controller. Diese Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten. MVC wurde ursprünglich für die Benutzeroberflächenentwicklung in Smalltalk (Programmiersprache) entwickelt und hat sich seitdem als Standard für die Strukturierung von Webanwendungen etabliert.
+Das \ac{MVC} Pattern ist ein bewährtes Software-Architekturmuster, dass die Strukturierung von Anwendungen in drei Hauptkomponenten vorsieht: Model, View und Controller. Diese Trennung der Verantwortlichkeiten erleichtert die Wartung und Erweiterung der Anwendung und fördert die Wiederverwendbarkeit und Testbarkeit der einzelnen Komponenten. \ac{MVC} wurde ursprünglich für die Benutzeroberflächenentwicklung in Smalltalk (Programmiersprache) entwickelt und hat sich seitdem als Standard für die Strukturierung von Webanwendungen etabliert.
 
-Das MVC-Pattern ist besonders nützlich in komplexen Anwendungen, bei denen eine klare Trennung zwischen Daten, Benutzeroberfläche und Steuerungslogik erforderlich ist. Es ermöglicht Entwicklern, sich auf spezifische Aspekte der Anwendung zu konzentrieren, ohne sich um die anderen Teile kümmern zu müssen. Dies führt zu einer besseren Organisation des Codes und erleichtert die Zusammenarbeit in Teams.
+Das \ac{MVC}-Pattern ist besonders nützlich in komplexen Anwendungen, bei denen eine klare Trennung zwischen Daten, Benutzeroberfläche und Steuerungslogik erforderlich ist. Es ermöglicht Entwicklern, sich auf spezifische Aspekte der Anwendung zu konzentrieren, ohne sich um die anderen Teile kümmern zu müssen. Dies führt zu einer besseren Organisation des Codes und erleichtert die Zusammenarbeit in Teams.
 
 
 \section{Eigenschaften}
 
-Das MVC-Pattern teilt eine Anwendung in drei Hauptkomponenten, die jeweils spezifische Aufgaben und Verantwortlichkeiten haben. Diese Hauptkomponenten werden im folgenden genauer erklärt:
+Das \ac{MVC}-Pattern teilt eine Anwendung in drei Hauptkomponenten, die jeweils spezifische Aufgaben und Verantwortlichkeiten haben. Diese Hauptkomponenten werden im folgenden genauer erklärt:
 \begin{itemize}
 
 \item Model: Diese Komponente repräsentiert die Daten und die Geschäftslogik der Anwendung. Sie ist verantwortlich für das Abrufen, Speichern und Verarbeiten von Daten. Das Model benachrichtigt die View über Änderungen, sodass die Benutzeroberfläche aktualisiert werden kann. Das Model enthält die Kernfunktionalität der Anwendung und ist unabhängig von der Benutzeroberfläche.
 
 \item View: Die View-Komponente stellt die Benutzeroberfläche dar. Sie zeigt die Daten des Models an und sendet Benutzereingaben an den Controller weiter. Die View ist für die Darstellung der Daten zuständig und reagiert auf Änderungen im Model. Sie ist passiv und kennt die Geschäftslogik nicht; sie zeigt nur die Daten an, die ihr vom Model bereitgestellt werden.
-
+\newpage
 \item Controller: Der Controller verarbeitet die Benutzereingaben, interagiert mit dem Model und aktualisiert die View entsprechend. Er fungiert als Vermittler zwischen Model und View und steuert den Datenfluss zwischen diesen Komponenten. Der Controller interpretiert die Eingaben des Benutzers und ruft die entsprechenden Methoden im Model auf, um die Daten zu ändern. Anschließend aktualisiert er die View, um die neuen Daten anzuzeigen.
 
 \end{itemize}
 Diese Struktur ermöglicht eine klare Trennung der Verantwortlichkeiten, was die Wartbarkeit und Erweiterbarkeit der Anwendung erleichtert. Entwickler können Änderungen an einer Komponente vornehmen, ohne die anderen Komponenten zu beeinflussen. Dies ist besonders nützlich in großen Projekten, bei denen mehrere Entwickler gleichzeitig an verschiedenen Teilen der Anwendung arbeiten.
 
 \section{Grafische Darstellung}
+\label{sec:klassendiagramm}
 
-Ein Klassendiagramm für das MVC-Pattern könnte wie folgt aussehen. Es zeigt die Beziehungen und Interaktionen zwischen Model, View und Controller.
+Ein Klassendiagramm für das \ac{MVC}-Pattern könnte wie folgt aussehen. Es zeigt die Beziehungen und Interaktionen zwischen Model, View und Controller.
 
 \begin{figure}[h]
 \centering
@@ -33,7 +34,7 @@ Ein Klassendiagramm für das MVC-Pattern könnte wie folgt aussehen. Es zeigt di
 \end{figure}
 
 In diesem Klassendiagramm sehen wir die folgenden drei Komponenten:
-
+\newpage
 \begin{itemize}
 \item Der Controller enthält Referenzen auf das Model und die View und hat Methoden zum Verarbeiten von Eingaben und Aktualisieren der View. Er ist das Bindeglied zwischen Model und View und sorgt dafür, dass die Benutzerinteraktionen korrekt verarbeitet werden.
 
@@ -42,7 +43,7 @@ In diesem Klassendiagramm sehen wir die folgenden drei Komponenten:
 \item Die View enthält Methoden zur Darstellung der Daten und zur Aktualisierung der Benutzeroberfläche. Sie zeigt die Daten an, die vom Model bereitgestellt werden, und reagiert auf Änderungen im Model.
 \end{itemize}
 
-Um die Interaktionen zwischen den Komponenten zu verstehen, werden diese im folgenden anhand eines Beispiels erklärt. In diesem Beispiel Intaagiert ein Nutzer mit der Benutzeroberfläche. Darauf hin werden folgende Interaktionen durchgeführt.
+Um die Interaktionen zwischen den Komponenten zu verstehen, werden diese im folgenden anhand eines Beispiels erklärt. In diesem Beispiel interagiert ein Nutzer mit der Benutzeroberfläche. Darauf hin werden folgende Interaktionen durchgeführt.
 
 \begin{enumerate}
 \item Der Benutzer interagiert mit der View (z.B. durch Klicken auf einen Button).
@@ -51,7 +52,9 @@ Um die Interaktionen zwischen den Komponenten zu verstehen, werden diese im folg
 
 \item Der Controller verarbeitet die Eingabe und aktualisiert das Model.
 
-\item Das Model benachrichtigt die View über die Änderungen.
+\item Das Model gibt die Änderungen für die View an den Controller weiter.
+
+\item Der Controller gibt die veränderten Daten an die View weiter.
 
 \item Die View rendert die aktualisierten Daten.
 \end{enumerate}
@@ -60,7 +63,7 @@ Diese Abfolge zeigt, wie die Komponenten zusammenarbeiten, um Benutzereingaben z
 
 \section{Code Beispiel}
 
-Hier ist ein abstraktes Codebeispiel, das das MVC-Pattern in einer Programmiersprache wie Python veranschaulicht:
+Im folgenden wird das \ac{MVC}-Pattern anhand eines abstrakten Codebeispiels, in der Programmiersprache Python, veranschaulicht. Hierbei wird sich am vorgestellten Klassendiagramm (siehe \hyperref[sec:klassendiagramm]{Kapitel 1.2}) orientiert.
 
 \begin{verbatim}
 # Model
@@ -76,8 +79,11 @@ class Model:
 
 # View
 class View:
-    def display_data(self, data):
+    def render(self, data):
         print(f"Data: {data}")
+
+    def update(self, data):
+        self.render(data)
 
 # Controller
 class Controller:
@@ -85,28 +91,31 @@ class Controller:
         self.model = model
         self.view = view
 
-    def update_data(self, data):
+    def handle(self):
+        self.view.render(self.model.get_data())
+
+    def update(self, data):
         self.model.set_data(data)
-        self.view.display_data(self.model.get_data())
+        self.view.update(self.model.get_data())
 
 # Anwendung
 if __name__ == "__main__":
     model = Model()
     view = View()
     controller = Controller(model, view)
-
+\end{verbatim}
+\newpage
+\begin{verbatim}
     # Initiale Anzeige
-    controller.view.display_data(controller.model.get_data())
+    controller.handle()
 
     # Daten aktualisieren
-    controller.update_data("Neue Daten")
+    controller.update("Neue Daten")
 \end{verbatim}
 
 In diesem Beispiel:
 \begin{itemize}
     \item Das \texttt{Model} speichert die Daten und stellt Methoden zum Abrufen und Aktualisieren der Daten bereit.
-    \item Die \texttt{View} zeigt die Daten an, die vom Model bereitgestellt werden.
+    \item Die \texttt{View} zeigt die Daten an und aktualisiert die Anzeige basierend auf den Daten, die vom Model bereitgestellt werden.
     \item Der \texttt{Controller} vermittelt zwischen Model und View, verarbeitet Benutzereingaben und aktualisiert das Model entsprechend.
 \end{itemize}
-
-Dieses Beispiel zeigt, wie die Komponenten des MVC-Patterns zusammenarbeiten, um Daten zu verwalten und anzuzeigen. Der Controller verarbeitet die Eingaben, aktualisiert das Model und sorgt dafür, dass die View die aktualisierten Daten anzeigt.
