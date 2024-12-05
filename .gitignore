@@ -1,5 +1,4 @@
 ## Core latex/pdflatex auxiliary files:
-*.aux
 *.lof
 *.log
 *.lot
@@ -27,7 +26,6 @@ main.pdf
 *.bbl
 *.bcf
 *.blg
-*-blx.aux
 *-blx.bib
 *.run.xml
 
