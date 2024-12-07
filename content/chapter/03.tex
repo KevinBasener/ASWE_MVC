@@ -1,11 +1,10 @@
-\chapter{Vor- und Nachteile der MVC-Architektur und verwandter Patterns}
+\chapter{Untersuchung des MVC-Patterns und verwandter Patterns}
 
 In dieser Untersuchung werden drei wichtige Design Patterns analysiert: \ac{MVC}, \ac{MVP} und \ac{MVVM}. Diese Patterns wurden basierend auf der Untersuchung von Aihara et al. \cite{aihara2012mvc} ausgewählt, da diese häufig in der Praxis verwendet werden und unterschiedliche Ansätze zur Strukturierung von Software bieten. Die Bewertung erfolgt anhand der in \hyperref[chap:methodik]{Kapitel 2} beschriebenen vier Kriterien: Modularität, Kohäsion, Kopplung sowie Code Overhead, um die jeweiligen Vor- und Nachteile zu ermitteln.
 
 \section{MVC (Model-View-Controller)}
 
-Das \ac{MVC}-Pattern bietet klare Vorteile in der Modularität und 
-Wiederverwendbarkeit, da es eine strikte Trennung zwischen 
+Das \ac{MVC}-Pattern bietet klare Vorteile in der Modularität und Wiederverwendbarkeit, da es eine strikte Trennung zwischen 
 Modell, View und Controller vorsieht. Diese Trennung ermöglicht 
 es Entwicklern, die Benutzeroberfläche zu ändern, ohne dass 
 Änderungen am zugrunde liegenden Datenmodell und der Anwendungslogik notwendig sind. Dadurch wird die Wartbarkeit des Systems erhöht. Dieser Vorteil zeigt sich besonders in großen Projekten, bei denen eine klare Strukturierung der Codebasis essenziell ist \cite{eudl63}, 
@@ -18,61 +17,21 @@ Komponenten. Dies kann insbesondere bei komplexen Benutzeroberflächen zu Leistu
 
 \section{MVP (Model-View-Presenter)}
 
-MVP fördert eine klare Trennung zwischen den verschiedenen
-Komponenten der Architektur. Der Presenter fungiert als Vermittler
-zwischen dem Model und der View, wodurch eine hohe Modularität
-erreicht wird \cite{qureshi2024}. Diese Trennung ermöglicht
-es, verschiedene Views zu implementieren, die den gleichen
-Presenter nutzen können, was die Wiederverwendbarkeit des Codes
-erhöht.
+Das \ac{MVP}-Pattern fördert eine klare Trennung zwischen den verschiedenen Komponenten einer Architektur. Der Presenter fungiert als Vermittler zwischen dem Model und der View. Dadurch wird eine hohe Modularität erreicht \cite{qureshi2024}. Diese Trennung ermöglicht es, dass verschiedene Views den gleichen Presenter nutzen können. Dies reduziert die Anzahl der benötigten Komponenten und erhöht die Wiederverwendbarkeit des Codes.
 
-Die Kohäsion in MVP ist hoch, da jede Komponente spezifische
-Aufgaben hat: Das Model kümmert sich um die Daten, die View
-um die Darstellung, und der Presenter um die Logik zwischen
-den beiden. Die Kopplung zwischen View und Presenter ist
-jedoch relativ eng, da der Presenter direkten Zugriff auf die
-View hat, um sie zu aktualisieren. Dies kann die Testbarkeit
-der einzelnen Komponenten beeinträchtigen \cite{aihara2012mvc}. Im
-Vergleich zu MVC, wo die Kopplung oft komplexer ist, bietet
-MVP eine bessere Kontrolle über die Interaktion zwischen den
-Komponenten.
+Die Kohäsion im \ac{MVP}-Pattern ist hoch, da jede Komponente spezifische Aufgaben hat. Das Model kümmert sich um die Daten, die View um die Darstellung und der Presenter um die Vermittlung und Steuerung der Logik zwischen beiden. Die Kopplung zwischen View und Presenter ist jedoch relativ eng, da der Presenter direkten Zugriff auf die View hat, um sie zu aktualisieren. Dies kann die Testbarkeit der einzelnen Komponenten beeinträchtigen \cite{aihara2012mvc}. Im Vergleich zu \ac{MVC} bietet \ac{MVP} eine bessere Kontrolle über die Interaktion zwischen den Komponenten, da der Presenter als alleiniger Vermittler fungiert und die View passiver ist. Dies reduziert die Komplexität der Kopplung und verbessert die Testbarkeit.
 
-Ein Nachteil von MVP kann der zusätzliche Codeaufwand sein,
-der durch die Interaktion zwischen Presenter und View entsteht.
-Während der Presenter die Benutzerinteraktionen verwaltet und
-die View aktualisiert, kann dies zu einem höheren Aufwand in
-der Codebasis führen. Dennoch wird argumentiert, dass der
-Nutzen in Form von besserer Testbarkeit und Wartbarkeit die
-Komplexität oft rechtfertigt \cite{qureshi2024}. 
+Ein Nachteil von \ac{MVP} ist der zusätzliche Code Overhead, der durch die Interaktion zwischen Presenter und View entsteht. Der Presenter verwaltet die Benutzerinteraktionen und aktualisiert die View. Dies kann zu einem höheren Aufwand in der Codebasis führen. Dennoch überwiegen die Vorteile in Bezug auf Testbarkeit und Wartbarkeit oft diesen zusätzlichen Aufwand \cite{qureshi2024}.
 
 \section{MVVM (Model-View-ViewModel)}
 
-Das Model-View-ViewModel (MVVM) Architekturdesign zeichnet sich durch eine klare 
-Trennung von View- und Geschäftslogik aus.
-MVVM bietet eine hohe Modularität, da die View und die Geschäftslogik (Model) 
-durch das ViewModel klar getrennt sind. Diese Trennung ermöglicht es Entwicklern, 
-die Benutzeroberfläche unabhängig von der Geschäftslogik zu entwickeln und zu 
-testen. Die Möglichkeit der automatischen Synchronisierung zwischen View und 
-ViewModel führt zu einer besseren Wartbarkeit und erleichtert die Wiederverwendung 
-von Komponenten \cite{arcos2018comparative}.
-Die Kohäsion in MVVM ist hoch, da jede Komponente (Model, View, ViewModel) klar 
-definierte Verantwortlichkeiten hat. Das Model kapselt die Geschäftslogik und 
-Daten, die View ist für die Darstellung und Benutzerinteraktion zuständig, und das 
-ViewModel dient als Bindeglied zwischen den beiden. Diese klare Trennung der 
-Verantwortlichkeiten führt zu einer besseren Strukturierung des Codes und erleichtert 
-die Wartung und Erweiterung der Anwendung \cite{arcos2018comparative}.
-Ein Nachteil von MVVM ist die potenziell hohe Kopplung zwischen View und 
-ViewModel. Obwohl das ViewModel die Geschäftslogik von der View trennt, kann die 
-extensive Nutzung von Datenbindungen (Bindings) zu einer engen Kopplung führen. 
-Diese enge Kopplung kann die Flexibilität und Testbarkeit der Anwendung 
-beeinträchtigen, da Änderungen in der View auch Anpassungen im ViewModel 
-erfordern können \cite{arcos2018comparative}.
-MVVM kann zu einem höheren Code Overhead führen, da zusätzliche Klassen und 
-Bindungen erforderlich sind, um die Trennung von View und Geschäftslogik zu 
-gewährleisten. Insbesondere die Implementierung und Verwaltung von Bindungen 
-zwischen View und ViewModel kann komplex und zeitaufwendig sein. Zudem kann die 
-extensive Nutzung von Observer-Synchronisation zu Leistungseinbußen führen, 
-insbesondere bei großen und komplexen Anwendungen \cite{arcos2018comparative}.
+Das \ac{MVVM} (Model-View-ViewModel) Architekturdesign zeichnet sich durch eine klare Trennung von View- und Geschäftslogik aus. \ac{MVVM} bietet eine hohe Modularität, da die View und die Geschäftslogik (Model) durch das ViewModel klar getrennt sind. Diese Trennung ermöglicht es Entwicklern, die Benutzeroberfläche unabhängig von der Geschäftslogik zu entwickeln und zu testen. Die Möglichkeit der automatischen Synchronisierung zwischen View und ViewModel führt zu einer besseren Wartbarkeit und erleichtert die Wiederverwendung von Komponenten \cite{arcos2018comparative}.
+
+Die Kohäsion in \ac{MVVM} ist hoch, da jede Komponente (Model, View, ViewModel) klar definierte Verantwortlichkeiten hat. Das Model kapselt die Geschäftslogik und Daten, die View ist für die Darstellung und Benutzerinteraktion zuständig, und das ViewModel dient als Bindeglied zwischen den beiden. Diese klare Trennung der Verantwortlichkeiten führt zu einer besseren Strukturierung des Codes und erleichtert die Wartung und Erweiterung der Anwendung \cite{arcos2018comparative}.
+
+Ein Nachteil von \ac{MVVM} ist die potenziell hohe Kopplung zwischen View und ViewModel. Obwohl das ViewModel die Geschäftslogik von der View trennt, kann die extensive Nutzung von Datenbindungen (Bindings) zu einer engen Kopplung führen. Diese enge Kopplung kann die Flexibilität und Testbarkeit der Anwendung beeinträchtigen, da Änderungen in der View auch Anpassungen im ViewModel erfordern können \cite{arcos2018comparative}.
+
+\ac{MVVM} kann zu einem höheren Code Overhead führen, da zusätzliche Klassen und Bindungen erforderlich sind, um die Trennung von View und Geschäftslogik zu gewährleisten. Insbesondere die Implementierung und Verwaltung von Bindungen zwischen View und ViewModel kann komplex und zeitaufwendig sein. Zudem kann die extensive Nutzung von Observer-Synchronisation zu Leistungseinbußen führen, insbesondere bei großen und komplexen Anwendungen \cite{arcos2018comparative}.
 
 \section{Vergleich der vorgestellten Design Patterns}
 Die Modell-View-Architekturmuster MVC, MVP und MVVM sind alle Teil der Familie der 
