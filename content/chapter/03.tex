@@ -3,33 +3,21 @@
 
 \section{Untersuchte Design Patterns und deren Vor- und Nachteile}
 
-In dieser Untersuchung werden drei wichtige Design Patterns analysiert: MVC, MVP und MVVM. Diese Patterns wurden basierend auf der Untersuchung von Aihara et al. \cite{aihara2012mvc} ausgewählt, da diese häufig in der Praxis verwendet werden und unterschiedliche Ansätze zur Strukturierung von Software bieten. Die Bewertung erfolgt anhand der in \hyperref      [chap:methodik]{Kapitel 2} beschriebenen vier Kriterien: Modularität, Kohäsion, Kopplung sowie Code Overhead, um die jeweiligen Vor- und Nachteile zu ermitteln.
+In dieser Untersuchung werden drei wichtige Design Patterns analysiert: \ac{MVC}, \ac{MVP} und \ac{MVVM}. Diese Patterns wurden basierend auf der Untersuchung von Aihara et al. \cite{aihara2012mvc} ausgewählt, da diese häufig in der Praxis verwendet werden und unterschiedliche Ansätze zur Strukturierung von Software bieten. Die Bewertung erfolgt anhand der in \hyperref[chap:methodik]{Kapitel 2} beschriebenen vier Kriterien: Modularität, Kohäsion, Kopplung sowie Code Overhead, um die jeweiligen Vor- und Nachteile zu ermitteln.
 
 \subsection{MVC (Model-View-Controller)}
 
-Das MVC-Pattern bietet klare Vorteile in der Modularität und 
+Das \ac{MVC}-Pattern bietet klare Vorteile in der Modularität und 
 Wiederverwendbarkeit, da es eine strikte Trennung zwischen 
 Modell, View und Controller vorsieht. Diese Trennung ermöglicht 
 es Entwicklern, die Benutzeroberfläche zu ändern, ohne dass 
-Änderungen am zugrunde liegenden Modell oder Controller 
-notwendig sind, was die Wartbarkeit des Systems erhöht. 
-Dieser Vorteil zeigt sich besonders in großen Projekten, bei denen 
-eine klare Strukturierung der Codebasis essenziell ist \cite{eudl63}, 
+Änderungen am zugrunde liegenden Datenmodell und der Anwendungslogik notwendig sind. Dadurch wird die Wartbarkeit des Systems erhöht. Dieser Vorteil zeigt sich besonders in großen Projekten, bei denen eine klare Strukturierung der Codebasis essenziell ist \cite{eudl63}, 
 \cite{researchgate65}.
 
-Jedoch wird die Kopplung zwischen Controller und View oft als 
-Nachteil angesehen. Diese starke Abhängigkeit bedeutet, dass 
-Änderungen in einer Komponente häufig zu Änderungen in der 
-anderen führen müssen, was die Flexibilität des Systems verringert 
-und den Wartungsaufwand erhöht \cite{researchgate65}.
+Die Kopplung des \ac{MVC}-Patterns zwischen Controller und View wird oft als Nachteil angesehen. Diese starke Abhängigkeit bedeutet, dass Änderungen bei einer der beiden Komponenten häufig zu Änderungen in der anderen führen. Dadurch wird die Flexibilität des Systems verringert und der Wartungsaufwand erhöht \cite{researchgate65}.
 
-Ein weiterer Nachteil von MVC ist der durch die Trennung 
-entstehende Overhead. Dieser zeigt sich vor allem in der 
-erhöhten Komplexität der Kommunikation zwischen den drei 
-Komponenten, was insbesondere bei komplexen 
-Benutzeroberflächen zu Leistungseinbußen führen kann. In 
-Systemen mit zahlreichen Views kann dies den Entwicklungsprozess 
-verlangsamen \cite{eudl63}.
+Ein weiterer Nachteil des \ac{MVC}-Patterns ist der durch die Trennung entstehende Code Overhead. Dieser zeigt sich vor allem in der erhöhten Komplexität der Kommunikation zwischen den drei 
+Komponenten. Dies kann insbesondere bei komplexen Benutzeroberflächen zu Leistungseinbußen führen. Hinzukommend kann der Entwicklungsprozess von Systemen mit mehreren Benutzeroberflächen (Views) verlangsamt und komplexer werden \cite{eudl63}.
 
 \subsection{MVP (Model-View-Presenter)}
 
