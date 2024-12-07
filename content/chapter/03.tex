@@ -1,11 +1,8 @@
-\chapter{Vor- und Nachteile des MVCs}
-
-
-\section{Untersuchte Design Patterns und deren Vor- und Nachteile}
+\chapter{Vor- und Nachteile der MVC-Architektur und verwandter Patterns}
 
 In dieser Untersuchung werden drei wichtige Design Patterns analysiert: \ac{MVC}, \ac{MVP} und \ac{MVVM}. Diese Patterns wurden basierend auf der Untersuchung von Aihara et al. \cite{aihara2012mvc} ausgewählt, da diese häufig in der Praxis verwendet werden und unterschiedliche Ansätze zur Strukturierung von Software bieten. Die Bewertung erfolgt anhand der in \hyperref[chap:methodik]{Kapitel 2} beschriebenen vier Kriterien: Modularität, Kohäsion, Kopplung sowie Code Overhead, um die jeweiligen Vor- und Nachteile zu ermitteln.
 
-\subsection{MVC (Model-View-Controller)}
+\section{MVC (Model-View-Controller)}
 
 Das \ac{MVC}-Pattern bietet klare Vorteile in der Modularität und 
 Wiederverwendbarkeit, da es eine strikte Trennung zwischen 
@@ -19,7 +16,7 @@ Die Kopplung des \ac{MVC}-Patterns zwischen Controller und View wird oft als Nac
 Ein weiterer Nachteil des \ac{MVC}-Patterns ist der durch die Trennung entstehende Code Overhead. Dieser zeigt sich vor allem in der erhöhten Komplexität der Kommunikation zwischen den drei 
 Komponenten. Dies kann insbesondere bei komplexen Benutzeroberflächen zu Leistungseinbußen führen. Hinzukommend kann der Entwicklungsprozess von Systemen mit mehreren Benutzeroberflächen (Views) verlangsamt und komplexer werden \cite{eudl63}.
 
-\subsection{MVP (Model-View-Presenter)}
+\section{MVP (Model-View-Presenter)}
 
 MVP fördert eine klare Trennung zwischen den verschiedenen
 Komponenten der Architektur. Der Presenter fungiert als Vermittler
@@ -48,7 +45,7 @@ der Codebasis führen. Dennoch wird argumentiert, dass der
 Nutzen in Form von besserer Testbarkeit und Wartbarkeit die
 Komplexität oft rechtfertigt \cite{qureshi2024}. 
 
-\subsection{MVVM (Model-View-ViewModel)}
+\section{MVVM (Model-View-ViewModel)}
 
 Das Model-View-ViewModel (MVVM) Architekturdesign zeichnet sich durch eine klare 
 Trennung von View- und Geschäftslogik aus.
@@ -77,7 +74,7 @@ zwischen View und ViewModel kann komplex und zeitaufwendig sein. Zudem kann die
 extensive Nutzung von Observer-Synchronisation zu Leistungseinbußen führen, 
 insbesondere bei großen und komplexen Anwendungen \cite{arcos2018comparative}.
 
-\subsection{Verwandtschaft von MVC, MVP und MVVM}
+\section{Vergleich der vorgestellten Design Patterns}
 Die Modell-View-Architekturmuster MVC, MVP und MVVM sind alle Teil der Familie der 
 MV*-Designmuster, die sich auf die Trennung von Anliegen konzentrieren \cite{aihara2012mvc}. Diese 
 Muster sind entstanden, um die Integration von Benutzeroberflächen mit der Anwendungsdomäne zu 
