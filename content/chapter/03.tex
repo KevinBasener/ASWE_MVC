@@ -34,19 +34,6 @@ Ein Nachteil von \ac{MVVM} ist die potenziell hohe Kopplung zwischen View und Vi
 \ac{MVVM} kann zu einem höheren Code Overhead führen, da zusätzliche Klassen und Bindungen erforderlich sind, um die Trennung von View und Geschäftslogik zu gewährleisten. Insbesondere die Implementierung und Verwaltung von Bindungen zwischen View und ViewModel kann komplex und zeitaufwendig sein. Zudem kann die extensive Nutzung von Observer-Synchronisation zu Leistungseinbußen führen, insbesondere bei großen und komplexen Anwendungen \cite{arcos2018comparative}.
 
 \section{Vergleich der vorgestellten Design Patterns}
-Die Modell-View-Architekturmuster MVC, MVP und MVVM sind alle Teil der Familie der 
-MV*-Designmuster, die sich auf die Trennung von Anliegen konzentrieren \cite{aihara2012mvc}. Diese 
-Muster sind entstanden, um die Integration von Benutzeroberflächen mit der Anwendungsdomäne zu 
-verbessern, insbesondere als grafische Benutzeroberflächen in den 1980er Jahren populär wurden. 
-MVC wurde 1988 dokumentiert und stellte die Grundlage für die Entwicklung weiterer Muster dar 
-\cite{aihara2012mvc}.
+Die Modell-View-Architekturmuster \ac{MVC}, \ac{MVP} und \ac{MVVM} sind alle Teil der Familie der MV*-Designmuster, die sich auf die Trennung von Anliegen konzentrieren \cite{aihara2012mvc}. Diese Muster sind entstanden, um die Integration von Benutzeroberflächen mit der Anwendungsdomäne zu verbessern, insbesondere als grafische Benutzeroberflächen in den 1980er Jahren populär wurden. \ac{MVC} wurde 1988 dokumentiert und stellte die Grundlage für die Entwicklung weiterer Muster dar \cite{aihara2012mvc}.
 
-Alle MV*-Muster bestehen aus drei Hauptkomponenten: Modell (M), View (V) und einer dritten, 
-variablen Komponente, die beschreibt, wie M und V miteinander kommunizieren \cite{aihara2012mvc}. Im 
-MVC-Muster übernimmt der Controller die Rolle der Verbindung zwischen dem Modell und der 
-Ansicht, indem er Benutzereingaben verarbeitet und die Darstellung aktualisiert 
-\cite{aihara2012mvc}. Im Gegensatz dazu trennt MVP die Logik weiter, indem der Presenter die 
-Interaktion zwischen View und Model steuert, was zu einer höheren Modularität führt 
-\cite{aihara2012mvc}. In MVVM wird diese Trennung weiter verfeinert, indem das ViewModel als 
-Bindeglied zwischen der View und dem Modell fungiert und eine automatische Synchronisierung 
-ermöglicht \cite{aihara2012mvc}.
+Alle MV*-Muster bestehen aus drei Hauptkomponenten: Modell (M), View (V) und einer dritten, variablen Komponente, die beschreibt, wie M und V miteinander kommunizieren \cite{aihara2012mvc}. Im \ac{MVC}-Muster übernimmt der Controller die Rolle der Verbindung zwischen dem Modell und der Ansicht, indem er Benutzereingaben verarbeitet und die Darstellung aktualisiert \cite{aihara2012mvc}. Im Gegensatz dazu trennt \ac{MVP} die Logik weiter, indem der Presenter die Interaktion zwischen View und Model steuert, was zu einer höheren Modularität führt \cite{aihara2012mvc}. In \ac{MVVM} wird diese Trennung weiter verfeinert, indem das ViewModel als Bindeglied zwischen der View und dem Modell fungiert und eine automatische Synchronisierung ermöglicht \cite{aihara2012mvc}.
