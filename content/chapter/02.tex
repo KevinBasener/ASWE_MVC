@@ -1,33 +1,20 @@
 %!TEX root = ../../main.tex
 
-\chapter{Methodik}
+\chapter{Methodik zur Bewertung von Design Patterns}
 \label{chap:methodik}
 
-\section{Kriterien zur Bewertung der MVC-Architektur}
-
-Olsson et al. \cite{olsson2015evolution} legen Kriterien fest, um 
-\ac{MVC} in Videospielen zu untersuchen.
-Die Bewertung der Vor- und Nachteile der \ac{MVC}-Architektur erfolgt orientiert 
-sich anhand der Kriterien, die zur Analyse der Architekturstruktur und ihrer 
-Effektivität herangezogen werden in \cite{olsson2015evolution}. Im Fokus stehen 
-die folgenden Aspekte:
+Olsson et al. \cite{olsson2015evolution} haben Kriterien zur Untersuchung der \ac{MVC}-Architektur in Videospielen festgelegt. Diese Kriterien können auch zur Bewertung verschiedener Design Patterns verwendet werden. Die Bewertung orientiert sich hierbei an allgemeinen Kriterien, die zur Analyse der Architekturstruktur und ihrer Effektivität herangezogen werden. Im Fokus stehen die folgenden Aspekte:
 
 \begin{itemize}
-    \item \textbf{Modularität}: Untersucht wird, wie klar die Trennung 
-    von Modell, View und Controller ist. Ein hohes Maß an Trennung 
-    deutet auf eine verbesserte Wartbarkeit hin.
+    \item \textbf{Modularität}: Untersucht wird, wie klar die Trennung von Modell, View und Controller ist. Ein hohes Maß an Trennung deutet auf eine verbesserte Wartbarkeit hin.
     
-    \item \textbf{Kohäsion und Kopplung}: Die Kohäsion misst, wie 
-    eng zusammenhängend die Verantwortlichkeiten der einzelnen 
-    Komponenten sind. Niedrige Kopplung zwischen Klassen ist ein 
-    positives Zeichen für Wiederverwendbarkeit.
+    \item \textbf{Kohäsion}: Die Kohäsion misst, wie eng zusammenhängend die Verantwortlichkeiten der einzelnen Komponenten sind. Eine hohe Kohäsion innerhalb einer Komponente ist ein positives Zeichen für eine klare und fokussierte Aufgabenverteilung.
     
-    \item \textbf{Code Overhead}: Hierbei wird analysiert, inwiefern 
-    die \ac{MVC}-Implementierung zusätzlichen Codeaufwand erzeugt und 
-    wie sich dies auf die Effizienz der Anwendung auswirkt.
+    \item \textbf{Kopplung}: Die Kopplung bewertet, wie stark die Abhängigkeiten zwischen den verschiedenen Komponenten sind. Eine niedrige Kopplung zwischen Klassen ist ein positives Zeichen für Wiederverwendbarkeit und Flexibilität.
+    
+    \item \textbf{Code Overhead}: Hierbei wird analysiert, inwiefern die Implementierung eines Patterns zusätzlichen Codeaufwand erzeugt und wie sich dies auf die Effizienz der Anwendung auswirkt.
 \end{itemize}
 
 Jede dieser Metriken dient dazu, die strukturellen Vorzüge sowie 
-potenzielle Nachteile der \ac{MVC}-Architektur zu ermitteln und eine 
-objektive Analyse zu gewährleisten. Basierend auf diesen Kriterien 
-werden die Ergebnisse in den folgenden Abschnitten diskutiert.
+potenzielle Nachteile des jeweiligen Design Patterns zu ermitteln und eine 
+objektive Analyse zu gewährleisten.
