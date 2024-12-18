@@ -1,0 +1,343 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{delessy2012securemvc}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=4d151eb5f0f6a8f1c529b3145a0bb759}{%
+           family={Delessy-Gassant},
+           familyi={D\bibinithyphendelim G\bibinitperiod},
+           given={Nelly},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e91e38b0db3bfbd7a82437dc94324c5e}{%
+           family={Fernandez},
+           familyi={F\bibinitperiod},
+           given={Eduardo\bibnamedelima B.},
+           giveni={E\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Panama City, Panama}%
+      }
+      \strng{namehash}{2d38017f348d23474d7716c3f4ce95fb}
+      \strng{fullhash}{2d38017f348d23474d7716c3f4ce95fb}
+      \strng{fullhashraw}{2d38017f348d23474d7716c3f4ce95fb}
+      \strng{bibnamehash}{2d38017f348d23474d7716c3f4ce95fb}
+      \strng{authorbibnamehash}{2d38017f348d23474d7716c3f4ce95fb}
+      \strng{authornamehash}{2d38017f348d23474d7716c3f4ce95fb}
+      \strng{authorfullhash}{2d38017f348d23474d7716c3f4ce95fb}
+      \strng{authorfullhashraw}{2d38017f348d23474d7716c3f4ce95fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{10th Latin American and Caribbean Conference for Engineering and Technology}
+      \field{note}{LACCEI International Symposium on Software Architecture and Patterns (LACCEI-ISAP-MiniPLoP'2012)}
+      \field{title}{The Secure MVC pattern}
+      \field{year}{2012}
+    \endentry
+    \entry{cui2009phpmvc}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=3ef36dfa90ae0c552c89062da0ec0a8d}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=00bb036f5e74e52852b5ad20607bd70d}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Lin},
+           giveni={L\bibinitperiod}}}%
+        {{hash=593e8ae7d876d30d1f1c630c836f45ab}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={LiJing},
+           giveni={L\bibinitperiod}}}%
+        {{hash=bcdd73174e26b44169c10e9083e72469}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Seoul, Korea (South)}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1bf350d6c890b7dd6489a4a81dabfc3d}
+      \strng{fullhash}{974e1ee29b96113a4320b673eb4c3049}
+      \strng{fullhashraw}{974e1ee29b96113a4320b673eb4c3049}
+      \strng{bibnamehash}{974e1ee29b96113a4320b673eb4c3049}
+      \strng{authorbibnamehash}{974e1ee29b96113a4320b673eb4c3049}
+      \strng{authornamehash}{1bf350d6c890b7dd6489a4a81dabfc3d}
+      \strng{authorfullhash}{974e1ee29b96113a4320b673eb4c3049}
+      \strng{authorfullhashraw}{974e1ee29b96113a4320b673eb4c3049}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2009 Fourth International Conference on Computer Sciences and Convergence Information Technology}
+      \field{month}{11}
+      \field{note}{Date Added to IEEE Xplore: 31 December 2009}
+      \field{title}{A Development Framework of PHP Based on MVC Design Patterns - FDF Framework}
+      \field{year}{2009}
+      \field{pages}{1077\bibrangedash 1082}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICCIT.2009.130
+      \endverb
+    \endentry
+    \entry{olsson2015evolution}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=290c26b910ae9293453c128d18ac1e1c}{%
+           family={Olsson},
+           familyi={O\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=f867f06c7f66e8ee28ccd0abe3e6806d}{%
+           family={Toll},
+           familyi={T\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9621adcad504d9deddf7c937e8148d88}{%
+           family={Wingkvist},
+           familyi={W\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bfff081f4c19822df2b266146cfae521}{%
+           family={Ericsson},
+           familyi={E\bibinitperiod},
+           given={Morgan},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{adf7b74a4d292307e6baeac779dd54d8}
+      \strng{fullhash}{84a262c0fc59d10cf793781b7c974d58}
+      \strng{fullhashraw}{84a262c0fc59d10cf793781b7c974d58}
+      \strng{bibnamehash}{84a262c0fc59d10cf793781b7c974d58}
+      \strng{authorbibnamehash}{84a262c0fc59d10cf793781b7c974d58}
+      \strng{authornamehash}{adf7b74a4d292307e6baeac779dd54d8}
+      \strng{authorfullhash}{84a262c0fc59d10cf793781b7c974d58}
+      \strng{authorfullhashraw}{84a262c0fc59d10cf793781b7c974d58}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2015 IEEE/ACM 4th International Workshop on Games and Software Engineering}
+      \field{title}{Evolution and Evaluation of the Model-View-Controller Architecture in Games}
+      \field{year}{2015}
+      \field{pages}{8\bibrangedash 14}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/GAS.2015.10
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/GAS.2015.10
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/GAS.2015.10
+      \endverb
+    \endentry
+    \entry{aihara2012mvc}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=d9bddcd88004c162fe7b64a1084f4be1}{%
+           family={Aihara},
+           familyi={A\bibinitperiod},
+           given={Diogo\bibnamedelima Satoru},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Universidad Politécnica de Madrid}%
+        {Blekinge Institute of Technology}%
+      }
+      \strng{namehash}{d9bddcd88004c162fe7b64a1084f4be1}
+      \strng{fullhash}{d9bddcd88004c162fe7b64a1084f4be1}
+      \strng{fullhashraw}{d9bddcd88004c162fe7b64a1084f4be1}
+      \strng{bibnamehash}{d9bddcd88004c162fe7b64a1084f4be1}
+      \strng{authorbibnamehash}{d9bddcd88004c162fe7b64a1084f4be1}
+      \strng{authornamehash}{d9bddcd88004c162fe7b64a1084f4be1}
+      \strng{authorfullhash}{d9bddcd88004c162fe7b64a1084f4be1}
+      \strng{authorfullhashraw}{d9bddcd88004c162fe7b64a1084f4be1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Master of Science Thesis}
+      \field{title}{A Journey Through the Land of Model-View Design Patterns}
+      \field{type}{phdthesis}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb /mnt/data/a_journey_through_the_land_of_model_view_design_pattern.pdf
+      \endverb
+      \verb{url}
+      \verb /mnt/data/a_journey_through_the_land_of_model_view_design_pattern.pdf
+      \endverb
+    \endentry
+    \entry{eudl63}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7079c72c21415131774625ba1d64f4b0}{%
+           family={Anonymous},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{fullhash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{fullhashraw}{7079c72c21415131774625ba1d64f4b0}
+      \strng{bibnamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorbibnamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authornamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorfullhash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorfullhashraw}{7079c72c21415131774625ba1d64f4b0}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{EUDL (European Union Digital Library)}
+      \field{title}{Understanding MVC: A Study in Web Application Development}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://eudl.eu/doi/10.4108/eai.20-10-2020.2305151
+      \endverb
+      \verb{url}
+      \verb https://eudl.eu/doi/10.4108/eai.20-10-2020.2305151
+      \endverb
+    \endentry
+    \entry{researchgate65}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=7079c72c21415131774625ba1d64f4b0}{%
+           family={Anonymous},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{fullhash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{fullhashraw}{7079c72c21415131774625ba1d64f4b0}
+      \strng{bibnamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorbibnamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authornamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorfullhash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorfullhashraw}{7079c72c21415131774625ba1d64f4b0}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ResearchGate}
+      \field{title}{Demystifying MVC Architecture}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/334555489_Demystifying_MVC_Architecture
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/334555489_Demystifying_MVC_Architecture
+      \endverb
+    \endentry
+    \entry{qureshi2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=60412503e8bc2e88f5d7de53e24b0cb0}{%
+           family={Qureshi},
+           familyi={Q\bibinitperiod},
+           given={M.\bibnamedelimi R.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c9201414647edf47d9c3764de7280389}{%
+           family={Sabir},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Jeddah, Kingdom of Saudi Arabia}%
+      }
+      \list{publisher}{1}{%
+        {King Abdulaziz University}%
+      }
+      \strng{namehash}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \strng{fullhash}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \strng{fullhashraw}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \strng{bibnamehash}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \strng{authorbibnamehash}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \strng{authornamehash}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \strng{authorfullhash}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \strng{authorfullhashraw}{47ccaf47da8d3a0493e9569a7b132a5b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computing and Information Technology}
+      \field{number}{YY}
+      \field{title}{A COMPARISON OF MODEL VIEW CONTROLLER AND MODEL VIEW PRESENTER}
+      \field{volume}{XX}
+      \field{year}{2024}
+      \field{pages}{ZZ\bibrangedash ZZ}
+      \range{pages}{-1}
+    \endentry
+    \entry{arcos2018comparative}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=a3958486b08a2c0abe2fd4e4a7eb5159}{%
+           family={Arcos-Medina},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={Gloria},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0108349fd8616ed8aaee63fac65988e3}{%
+           family={Menéndez},
+           familyi={M\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=db3e77ce8b1cca9b6ef4b5d8c1809e4d}{%
+           family={Vallejo},
+           familyi={V\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Knowledge E}%
+      }
+      \strng{namehash}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \strng{fullhash}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \strng{fullhashraw}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \strng{bibnamehash}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \strng{authorbibnamehash}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \strng{authornamehash}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \strng{authorfullhash}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \strng{authorfullhashraw}{a9d16237572fe1eb9ea1a6cc5ef74667}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Simposio Iberoamericano en Programación Informática (Ibero-American Symposium on Computer Programming)}
+      \field{title}{Comparative Study of Performance and Productivity of MVC and MVVM design patterns}
+      \field{year}{2018}
+      \field{pages}{241\bibrangedash 252}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.18502/keg.v1i2.1498
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.18502/keg.v1i2.1498
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.18502/keg.v1i2.1498
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
